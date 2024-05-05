@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="Phila_CommoditiesContracts" id="PostgreSQL-875" database="PostgreSQL" >
+	<schema name="instance" catalogname="Phila_CommoditiesContracts" >
+		<table name="contract_facts" >
+			<column name="record_id" type="bigint" jt="-5" mandatory="y" />
+			<column name="total_contract_month" type="integer" jt="4" />
+			<column name="remaining_contract_month" type="integer" jt="4" />
+			<column name="total_transactions" type="numeric" jt="2" />
+			<column name="contract_amount" type="money" jt="3" />
+			<column name="contract_number" type="text" jt="12" />
+			<column name="contract_type_id" type="integer" jt="4" />
+			<column name="verdor_id" type="integer" jt="4" />
+			<column name="department_id" type="integer" jt="4" />
+			<column name="start_date" type="bigint" jt="-5" />
+			<column name="end_date" type="bigint" jt="-5" />
+			<index name="pk_contract_facts" unique="PRIMARY_KEY" >
+				<column name="record_id" />
+			</index>
+			<fk name="fk_contract_facts_dim_contract" to_schema="Phila_CommoditiesContracts.instance" to_table="dim_contract" >
+				<fk_column name="contract_number" pk="contract_number" />
+			</fk>
+			<fk name="fk_contract_facts_dim_contract_type" to_schema="Phila_CommoditiesContracts.instance" to_table="dim_contract_type" >
+				<fk_column name="contract_type_id" pk="contract_type_id" />
+			</fk>
+			<fk name="fk_contract_facts_dim_vendor" to_schema="Phila_CommoditiesContracts.instance" to_table="dim_vendor" >
+				<fk_column name="verdor_id" pk="vendor_id" />
+			</fk>
+			<fk name="fk_contract_facts_dim_department" to_schema="Phila_CommoditiesContracts.instance" to_table="dim_department" >
+				<fk_column name="department_id" pk="department_id" />
+			</fk>
+			<fk name="fk_contract_facts_dim_date" to_schema="Phila_CommoditiesContracts.instance" to_table="dim_date" >
+				<fk_column name="start_date" pk="date_id" />
+			</fk>
+			<fk name="fk_contract_facts_dim_date_0" to_schema="Phila_CommoditiesContracts.instance" to_table="dim_date" >
+				<fk_column name="end_date" pk="date_id" />
+			</fk>
+		</table>
+		<table name="dim_contract" >
+			<column name="contract_number" type="text" jt="12" mandatory="y" />
+			<column name="bid_number" type="bigint" jt="-5" />
+			<column name="contract_description" type="text" jt="12" />
+			<column name="quarter" type="integer" jt="4" />
+			<index name="pk_dim_contract" unique="PRIMARY_KEY" >
+				<column name="contract_number" />
+			</index>
+		</table>
+		<table name="dim_contract_type" >
+			<column name="contract_type_id" type="integer" jt="4" mandatory="y" />
+			<column name="contract_type" type="text" jt="12" />
+			<index name="pk_dim_contract_type" unique="PRIMARY_KEY" >
+				<column name="contract_type_id" />
+			</index>
+		</table>
+		<table name="dim_date" >
+			<column name="date_id" type="bigint" jt="-5" mandatory="y" />
+			<column name="year" type="integer" jt="4" />
+			<column name="quarter" type="integer" jt="4" />
+			<column name="month" type="integer" jt="4" />
+			<column name="day" type="integer" jt="4" />
+			<column name="month_name" type="varchar" length="50" jt="12" />
+			<column name="day_name" type="varchar" length="50" jt="12" />
+			<column name="week_of_month" type="integer" jt="4" />
+			<column name="week_of_year" type="integer" jt="4" />
+			<column name="date" type="date" jt="91" />
+			<index name="pk_dim_date" unique="PRIMARY_KEY" >
+				<column name="date_id" />
+			</index>
+		</table>
+		<table name="dim_department" >
+			<column name="department_id" type="integer" jt="4" mandatory="y" />
+			<column name="department_name" type="text" jt="12" />
+			<index name="pk_dim_department" unique="PRIMARY_KEY" >
+				<column name="department_id" />
+			</index>
+		</table>
+		<table name="dim_vendor" >
+			<column name="vendor_id" type="integer" jt="4" mandatory="y" />
+			<column name="vendor_name" type="text" jt="12" />
+			<index name="pk_dim_vendor" unique="PRIMARY_KEY" >
+				<column name="vendor_id" />
+			</index>
+		</table>
+	</schema>
+	<layout name="Default Layout" id="Layout-1444" confirmed="y" show_relation="columns" >
+		<entity schema="Phila_CommoditiesContracts.instance" name="contract_facts" color="C1D8EE" x="357" y="51" />
+		<entity schema="Phila_CommoditiesContracts.instance" name="dim_contract" color="C1D8EE" x="51" y="85" />
+		<entity schema="Phila_CommoditiesContracts.instance" name="dim_contract_type" color="C1D8EE" x="68" y="289" />
+		<entity schema="Phila_CommoditiesContracts.instance" name="dim_date" color="C1D8EE" x="748" y="102" />
+		<entity schema="Phila_CommoditiesContracts.instance" name="dim_department" color="C1D8EE" x="493" y="408" />
+		<entity schema="Phila_CommoditiesContracts.instance" name="dim_vendor" color="C1D8EE" x="272" y="408" />
+	</layout>
+</project>
