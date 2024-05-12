@@ -2,7 +2,7 @@ CREATE SCHEMA IF NOT EXISTS "phila_commodities_contracts";
 
 CREATE  TABLE "phila_commodities_contracts".dim_contract ( 
 	contract_number      text  NOT NULL  ,
-	bid_number           bigint    ,
+	bid_number           text    ,
 	contract_description text    ,
 	quarter              integer    ,
 	CONSTRAINT pk_dim_contract PRIMARY KEY ( contract_number )
@@ -44,8 +44,8 @@ CREATE  TABLE "phila_commodities_contracts".contract_facts (
 	record_id            bigint  NOT NULL  ,
 	total_contract_month integer    ,
 	remaining_contract_month integer    ,
-	total_transactions   numeric    ,
-	contract_amount      money    ,
+	total_transactions   numeric(20,2)    ,
+	contract_amount      numeric(20,2)    ,
 	contract_number      text    ,
 	contract_type_id     integer    ,
 	verdor_id            integer    ,
