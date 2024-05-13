@@ -45,11 +45,11 @@ CREATE  TABLE "phila_commodities_contracts".contract_facts (
 	remaining_contract_month integer    ,
 	total_transactions   numeric(20,2)    ,
 	contract_amount      numeric(20,2)    ,
-	fisco_quarter        integer    ,
-	fisco_year           integer    ,
+	fiscal_quarter        integer    ,
+	fiscal_year           integer    ,
 	contract_number      text    ,
 	contract_type_id     integer    ,
-	verdor_id            integer    ,
+	vendor_id            integer    ,
 	department_id        integer    ,
 	start_date           bigint    ,
 	end_date             bigint    ,
@@ -60,7 +60,7 @@ ALTER TABLE "phila_commodities_contracts".contract_facts ADD CONSTRAINT fk_contr
 
 ALTER TABLE "phila_commodities_contracts".contract_facts ADD CONSTRAINT fk_contract_facts_dim_contract_type FOREIGN KEY ( contract_type_id ) REFERENCES "phila_commodities_contracts".dim_contract_type( contract_type_id );
 
-ALTER TABLE "phila_commodities_contracts".contract_facts ADD CONSTRAINT fk_contract_facts_dim_vendor FOREIGN KEY ( verdor_id ) REFERENCES "phila_commodities_contracts".dim_vendor( vendor_id );
+ALTER TABLE "phila_commodities_contracts".contract_facts ADD CONSTRAINT fk_contract_facts_dim_vendor FOREIGN KEY ( vendor_id ) REFERENCES "phila_commodities_contracts".dim_vendor( vendor_id );
 
 ALTER TABLE "phila_commodities_contracts".contract_facts ADD CONSTRAINT fk_contract_facts_dim_department FOREIGN KEY ( department_id ) REFERENCES "phila_commodities_contracts".dim_department( department_id );
 
