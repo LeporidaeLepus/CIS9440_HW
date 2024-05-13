@@ -26,6 +26,16 @@ You can check the data dictionary file in `docs` folder, or you can check the ta
 |Total_Transactions|The total amount of all payments initiated during the reported quarter. This does not represent the total amount of payments for the life of the contract or for the active term, only those initiated during the reported quarter. Additionally, the payments|Numeric|
 |Vendor_Name|The name of the vendor currently holding the contract.|Text|
 
+## Storage
+
+The raw data extract from data source is stored with Azure.
+
+## Modeling
+
+Model and schema of the data warehouse can be seen in the `model` folder. The scripts that create data warehouse are in `scripts` folder. <br/>
+
+[star shema of this project](/model/
+
 ### Azure PostgrSQL
 
 Server name: cis9440-hw.postgres.database.azure.com
