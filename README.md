@@ -44,7 +44,11 @@ A ETL data pipeline is built. The data is downloaded from the staging and transf
 ### Azure PostgrSQL
 
 Server name: cis9440-hw.postgres.database.azure.com
-// Admin username: homework
-// password: cis9440-hw
+<!---Admin username: homework--->
+<!---password: cis9440-hw--->
 
-Tableau: https://public.tableau.com/views/phila_commodities_contracts/Dashboard1
+## Data Serving
+
+### Data Visualization
+
+Tableau Link: https://public.tableau.com/views/phila_commodities_contracts/Dashboard1
