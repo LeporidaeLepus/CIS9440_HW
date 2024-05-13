@@ -2,13 +2,13 @@
 
 ## Data Source
 
-Data Source: OpenDataPhilly-Commodities Contracts <br/>
+Data Source: OpenDataPhilly-Commodities Contracts </br>
 Link: https://opendataphilly.org/datasets/commodities-contracts/ </br>
 These data come from Philadelphia City Open Data. The data set represents contracts that are bid and awarded by the City's Procurement Department, for supplies, equipment, non-professional services, and public works. Each data set includes information regarding contracts that were renewed or received payment during the given quarter.
 
 ### Data Dictionary
 
-You can check the data dictionary file in `docs` folder, or you can check the table below. <br/>
+You can check the data dictionary file in `docs` folder, or you can check the table below. </br>
 
 | Field Name | Description | Type |
 |------|------|------|
@@ -51,4 +51,4 @@ Server name: cis9440-hw.postgres.database.azure.com
 
 ### Data Visualization
 
-Tableau Link: https://public.tableau.com/views/phila_commodities_contracts/Dashboard1
+Tableau Link: https://public.tableau.com/app/profile/jingyu.wang4566/viz/phila_commodities_contracts/Dashboard
