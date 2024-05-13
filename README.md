@@ -1,4 +1,9 @@
-# README
+# Philadelphia Commodities Contracts
+
+## Data Source
+
+Data Source: OpenDataPhilly-Commodities Contracts
+Link: https://opendataphilly.org/datasets/commodities-contracts/
 
 ### Azure PostgrSQL
 
