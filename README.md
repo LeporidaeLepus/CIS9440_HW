@@ -28,13 +28,13 @@ You can check the data dictionary file in `docs` folder, or you can check the ta
 
 ## Storage
 
-The raw data extract from data source is stored with Azure.
+The raw data extract from data source is stored in Azure.
 
 ## Modeling
 
 Model and schema of the data warehouse can be seen in the `model` folder. The scripts that create data warehouse are in `scripts` folder. <br/>
 
-[star shema of this project](/model/
+[star shema of this project](/model/star_schema.png)
 
 ### Azure PostgrSQL
 
