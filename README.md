@@ -32,14 +32,19 @@ The raw data extract from data source is stored in Azure.
 
 ## Modeling
 
-Model and schema of the data warehouse can be seen in the `model` folder. The scripts that create data warehouse are in `scripts` folder. <br/>
+This project use a star schema. </br>
+Model and schema of the data warehouse can be seen in the `model` folder. The scripts that create data warehouse are in `scripts` folder. </br>
 
-[star shema of this project](/model/star_schema.png)
+![star shema of this project](/model/star_schema.png)
+
+## Transformation
+
+A ETL data pipeline is built. The data is downloaded from the staging and transformated, then loaded into Azure PostgrSQL Data Warehous.
 
 ### Azure PostgrSQL
 
 Server name: cis9440-hw.postgres.database.azure.com
-Admin username: homework
-password: cis9440-hw
+// Admin username: homework
+// password: cis9440-hw
 
 Tableau: https://public.tableau.com/views/phila_commodities_contracts/Dashboard1
