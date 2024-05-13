@@ -4,7 +4,6 @@ CREATE  TABLE "phila_commodities_contracts".dim_contract (
 	contract_number      text  NOT NULL  ,
 	bid_number           text    ,
 	contract_description text    ,
-	quarter              integer    ,
 	CONSTRAINT pk_dim_contract PRIMARY KEY ( contract_number )
  );
 
@@ -16,6 +15,7 @@ CREATE  TABLE "phila_commodities_contracts".dim_contract_type (
 
 CREATE  TABLE "phila_commodities_contracts".dim_date ( 
 	date_id              bigint  NOT NULL  ,
+	"date"               date    ,
 	"year"               integer    ,
 	quarter              integer    ,
 	"month"              integer    ,
@@ -24,7 +24,6 @@ CREATE  TABLE "phila_commodities_contracts".dim_date (
 	day_name             varchar(50)    ,
 	week_of_month        integer    ,
 	week_of_year         integer    ,
-	"date"               date    ,
 	CONSTRAINT pk_dim_date PRIMARY KEY ( date_id )
  );
 
@@ -46,6 +45,8 @@ CREATE  TABLE "phila_commodities_contracts".contract_facts (
 	remaining_contract_month integer    ,
 	total_transactions   numeric(20,2)    ,
 	contract_amount      numeric(20,2)    ,
+	fisco_quarter        integer    ,
+	fisco_year           integer    ,
 	contract_number      text    ,
 	contract_type_id     integer    ,
 	verdor_id            integer    ,
