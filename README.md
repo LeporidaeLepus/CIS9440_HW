@@ -30,6 +30,8 @@ You can check the data dictionary file in `docs` folder, or you can check the ta
 
 The raw data extract from data source is stored in Azure.
 
+![azure_container](/img/azure_storage.png)
+
 ## Modeling
 
 This project use a star schema. </br>
@@ -46,6 +48,8 @@ A ETL data pipeline is built. The data is downloaded from the staging and transf
 Server name: cis9440-hw.postgres.database.azure.com
 <!---Admin username: homework--->
 <!---password: cis9440-hw--->
+
+![azure_postgresql](/img/postgres.png)
 
 ## Data Serving
 
